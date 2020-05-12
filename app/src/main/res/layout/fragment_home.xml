@@ -15,9 +15,108 @@
         android:layout_marginEnd="8dp"
         android:fontFamily="@font/poppins_bold"
         android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textSize="20sp" />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:text="COVID-19 GLOBAL CASES"
+            android:layout_marginBottom="24dp"
+            style="@style/PageHeadings"
+            android:layout_gravity="center_horizontal"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Confirmed"
+            android:layout_gravity="center_horizontal"
+            style="@style/LabelFontStyle"
+            android:textAlignment="center"
+            />
+        <TextView
+            android:id="@+id/globalTotalConfirmed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:layout_gravity="center_horizontal"
+            style="@style/TotalsFontStyle"
+            android:textColor="@color/colorTotalConfirmed"
+            android:textAlignment="center"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Deaths"
+            android:layout_gravity="center_horizontal"
+            style="@style/LabelFontStyle"
+            android:textAlignment="center"
+            />
+        <TextView
+            android:id="@+id/globalTotalDeaths"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:layout_gravity="center_horizontal"
+            style="@style/TotalsFontStyle"
+            android:textColor="@color/colorPrimary"
+            android:textAlignment="center"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Recoveries"
+            android:layout_gravity="center_horizontal"
+            style="@style/LabelFontStyle"
+            android:textAlignment="center"
+            />
+        <TextView
+            android:id="@+id/globalTotalRecoveries"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:layout_gravity="center_horizontal"
+            style="@style/TotalsFontStyle"
+            android:textColor="@color/colorTotalRecovered"
+            android:textAlignment="center"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date"
+            android:layout_gravity="center_horizontal"
+            style="@style/LabelFontStyle"
+            android:textAlignment="center"
+            />
+
+        <TextView
+            android:id="@+id/LastUdated"
+            style="@style/LabelFontStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/poppins_medium"
+            android:text="- - - -"
+            android:textAlignment="center"
+            android:textColor="@color/black" />
+
+    </LinearLayout>
+    <!--        Use indeterminate mode for the progress bar when you do not know how long an operation will take.-->
+    <!--    Use determinate mode for the progress bar when you want to show that a specific quantity of progress has occurred-->
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progress_circular_home"
+        android:indeterminate="true"
+        android:layout_centerInParent="true"/>
 </RelativeLayout>
