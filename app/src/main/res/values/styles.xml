@@ -13,6 +13,31 @@
         <item name="windowNoTitle">true</item>
     </style>
 
+    <style name="PageHeadings">
+        <item name="fontFamily">@font/poppins_bold</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="NavigationDrawer">
+        <item name="fontFamily">@font/poppins_bold</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="LabelFontStyle">
+        <item name="fontFamily">@font/poppins_semibold</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="TotalsFontStyle">
+        <item name="fontFamily">@font/poppins_bold</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+    <style name="date">
+        <item name="fontFamily">@font/poppins_medium</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
