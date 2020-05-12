@@ -4,119 +4,173 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.home.HomeFragment">
+    tools:context=".ui.home.HomeFragment"
+    android:background="#F7F7F7">
 
-    <TextView
-        android:id="@+id/text_home"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:fontFamily="@font/poppins_bold"
-        android:textAlignment="center"
-        android:textSize="20sp" />
-
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:orientation="vertical">
+        android:layout_height="150dp"
+        android:gravity="center"
+        android:background="@drawable/corners">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20sp"
-            android:textAlignment="center"
+            android:textColor="#fff"
             android:text="COVID-19 GLOBAL CASES"
-            android:layout_marginBottom="24dp"
-            style="@style/PageHeadings"
-            android:layout_gravity="center_horizontal"/>
+            style="@style/PageHeadings" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Total Confirmed"
-            android:layout_gravity="center_horizontal"
-            style="@style/LabelFontStyle"
-            android:textAlignment="center"
-            />
-        <TextView
-            android:id="@+id/globalTotalConfirmed"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="-"
-            android:layout_gravity="center_horizontal"
-            style="@style/TotalsFontStyle"
-            android:textColor="@color/colorTotalConfirmed"
-            android:textAlignment="center"
-            />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Total Deaths"
-            android:layout_gravity="center_horizontal"
-            style="@style/LabelFontStyle"
-            android:textAlignment="center"
-            />
-        <TextView
-            android:id="@+id/globalTotalDeaths"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="-"
-            android:layout_gravity="center_horizontal"
-            style="@style/TotalsFontStyle"
-            android:textColor="@color/colorPrimary"
-            android:textAlignment="center"
-            />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Total Recoveries"
-            android:layout_gravity="center_horizontal"
-            style="@style/LabelFontStyle"
-            android:textAlignment="center"
-            />
-        <TextView
-            android:id="@+id/globalTotalRecoveries"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="-"
-            android:layout_gravity="center_horizontal"
-            style="@style/TotalsFontStyle"
-            android:textColor="@color/colorTotalRecovered"
-            android:textAlignment="center"
-            />
+    </RelativeLayout>
 
-        <TextView
+<!--    <TextView-->
+<!--        android:id="@+id/text_home"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="8dp"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        android:layout_marginEnd="8dp"-->
+<!--        android:fontFamily="@font/poppins_bold"-->
+<!--        android:textAlignment="center"-->
+<!--        android:textSize="20sp" />-->
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:layout_centerHorizontal="true"
+        android:foregroundGravity="center">
+
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Date"
-            android:layout_gravity="center_horizontal"
-            style="@style/LabelFontStyle"
-            android:textAlignment="center"
-            />
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/LastUdated"
-            style="@style/LabelFontStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:fontFamily="@font/poppins_medium"
-            android:text="- - - -"
-            android:textAlignment="center"
-            android:textColor="@color/black" />
+            <androidx.cardview.widget.CardView
+                android:layout_width="400dp"
+                android:layout_height="150dp"
+                app:cardCornerRadius="15dp"
+                android:layout_gravity="center">
 
-    </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total Confirmed"
+                    android:layout_marginTop="20dp"
+                    android:layout_gravity="center_horizontal"
+                    style="@style/LabelFontStyle"
+                    android:textAlignment="center"
+                    />
+                <TextView
+                    android:id="@+id/globalTotalConfirmed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="---"
+                    android:layout_marginTop="30dp"
+                    android:layout_gravity="center_horizontal"
+                    style="@style/TotalsFontStyle"
+                    android:textColor="@color/colorTotalConfirmed"/>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="400dp"
+                android:layout_height="150dp"
+                app:cardCornerRadius="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total Deaths"
+                    android:layout_gravity="center_horizontal"
+                    style="@style/LabelFontStyle"
+                    android:textAlignment="center"
+                    />
+                <TextView
+                    android:id="@+id/globalTotalDeaths"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="---"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="30dp"
+                    style="@style/TotalsFontStyle"
+                    android:textColor="@color/colorPrimary"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="400dp"
+                android:layout_height="150dp"
+                app:cardCornerRadius="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total Recoveries"
+                    android:layout_gravity="center_horizontal"
+                    style="@style/LabelFontStyle"
+                    android:textAlignment="center"
+                    />
+                <TextView
+                    android:id="@+id/globalTotalRecoveries"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="---"
+                    android:layout_marginTop="30dp"
+                    android:layout_gravity="center_horizontal"
+                    style="@style/TotalsFontStyle"
+                    android:textColor="@color/colorTotalRecovered"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="400dp"
+                android:layout_height="150dp"
+                app:cardCornerRadius="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Date"
+                    android:layout_gravity="center_horizontal"
+                    style="@style/LabelFontStyle"
+                    android:textAlignment="center"
+                    />
+
+                <TextView
+                    android:id="@+id/LastUdated"
+                    style="@style/LabelFontStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="- - - -"
+                    android:layout_marginTop="30dp"
+                    android:textColor="@color/black" />
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
     <!--        Use indeterminate mode for the progress bar when you do not know how long an operation will take.-->
     <!--    Use determinate mode for the progress bar when you want to show that a specific quantity of progress has occurred-->
+
     <ProgressBar
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/progress_circular_home"
         android:indeterminate="true"
         android:layout_centerInParent="true"/>
+
 </RelativeLayout>

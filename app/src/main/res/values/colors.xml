@@ -8,6 +8,7 @@
     <color name="colorTotalRecovered">#7bb974</color>
     <color name="colorSearchBar">#0F110D</color>
     <color name="black">#000</color>
+    <color name="colorPerfectGreen">#2AFF00</color>
 
 
 </resources>
